@@ -6,7 +6,7 @@ class OrderController{
     
   }
   async getOne(req,res){
- 
+ res.json('hui')
   }
 
 }
