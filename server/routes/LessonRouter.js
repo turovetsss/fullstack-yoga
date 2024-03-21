@@ -1,6 +1,6 @@
 const Router=require('express');
 const router=new Router();
-
-router.post('/',)
-router.get('/',)
+const LessonController = require('../controllers/LessonController')
+router.post('/',LessonController.create)
+router.get('/',LessonController.getAll)
 module.exports=router
