@@ -4,7 +4,7 @@ const ApiError = require('../error/ApiError')
 class OrderController{
   async create(req,res){
       const {price,lesson} = req.body
-      const order = await order.create({price,lesson})
+      const order = await Order.create({price,lesson})
       return res.json(order)
   }
   async getAll(req,res){
