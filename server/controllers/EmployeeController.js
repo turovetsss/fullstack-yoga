@@ -10,7 +10,7 @@ class EmployeeController{
     const{img}=req.files
     let fileName = uuid.v4() + '.jpg'
     img.mv(path.resolve(__dirname, '..','static',fileName))
-    const employee = await employee.create({name,surname,direction,img:fileName})
+    const employee = await Employee.create({name,surname,direction,img:fileName})
     return res.json(employee)
     } catch(e){
       next(ApiError.badRequest(e.message))
